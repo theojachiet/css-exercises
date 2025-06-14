@@ -3,8 +3,16 @@
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 0.5fr 5fr 1fr;
+  gap: 10px;
 }
 
 .container div {
@@ -17,6 +25,8 @@
 
 .header {
   background-color: #393f4d;
+  grid-column: 1 / -1;
+  grid-row: 1;
 }
 
 .menu ul,
@@ -26,6 +36,8 @@
 
 .sidebar {
   background-color: #C50208;
+  grid-column: 1;
+  grid-row: 2 / 4;
 }
 
 .sidebar .photo {
@@ -83,6 +95,8 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
+  grid-row: -2;
 }
 
 .footer p {
